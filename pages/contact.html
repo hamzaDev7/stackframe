@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Stackframe</title>
+  <meta name="description" content="Reach the Stackframe team with questions, corrections, or guest pitches.">
+  <link rel="canonical" href="https://www.stackframe.example/pages/contact.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Stackframe">
+  <meta property="og:description" content="Reach the Stackframe team with questions, corrections, or guest pitches.">
+  <meta property="og:url" content="https://www.stackframe.example/pages/contact.html">
+  <meta property="og:site_name" content="Stackframe">
+  <meta property="og:image" content="https://www.stackframe.example/assets/images/og-cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Stackframe">
+  <meta name="twitter:description" content="Reach the Stackframe team with questions, corrections, or guest pitches.">
+  <meta name="twitter:image" content="https://www.stackframe.example/assets/images/og-cover.png">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.stackframe.example/index.html"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.stackframe.example/pages/contact.html"}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo" aria-label="Stackframe home">
+        <span class="logo-mark" aria-hidden="true">{ }</span>
+        Stackframe
+      </a>
+
+      <nav class="main-nav" data-open="false" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/blog.html">Blog</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-content" aria-label="Toggle menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li aria-current="page">Contact</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">// contact</p>
+        <h1>Get in touch</h1>
+        <p class="hero-lede">Questions, corrections, guest pitches, or just a comment on something you read — send it over and we'll get back to you.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="form-layout">
+          <div>
+            <div class="form-status success" id="form-success" role="status">Thanks — your message has been sent. We'll reply as soon as we can.</div>
+            <div class="form-status error" id="form-error" role="alert">Something went wrong sending your message. Please check the form and try again.</div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group" id="group-name">
+                <label class="form-label" for="name">Name <span class="required">*</span></label>
+                <input class="form-input" type="text" id="name" name="name" autocomplete="name" required>
+                <p class="form-error-message">Please enter your name.</p>
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label class="form-label" for="email">Email <span class="required">*</span></label>
+                <input class="form-input" type="email" id="email" name="email" autocomplete="email" required>
+                <p class="form-error-message">Please enter a valid email address.</p>
+              </div>
+
+              <div class="form-group" id="group-message">
+                <label class="form-label" for="message">Message <span class="required">*</span></label>
+                <textarea class="form-textarea" id="message" name="message" required minlength="10"></textarea>
+                <p class="form-hint">At least 10 characters.</p>
+                <p class="form-error-message">Please enter a message (at least 10 characters).</p>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Send message</button>
+            </form>
+          </div>
+
+          <div class="contact-info-card">
+            <h3>Other ways to reach us</h3>
+            <p>We aim to reply within two business days.</p>
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <span class="label">Email</span>
+                <span class="value">hello@stackframe.example</span>
+              </div>
+              <div class="contact-info-item">
+                <span class="label">Guest pitches</span>
+                <span class="value">pitches@stackframe.example</span>
+              </div>
+              <div class="contact-info-item">
+                <span class="label">Response time</span>
+                <span class="value">1&ndash;2 business days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" aria-label="Stackframe home">
+            <span class="logo-mark" aria-hidden="true">{ }</span>
+            Stackframe
+          </a>
+          <p>A technology publication with original, practical writing on web development, AI, and programming.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/blog.html">Blog</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../pages/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="../pages/sitemap.html">HTML Sitemap</a></li>
+            <li><a href="../pages/404.html">404 Page</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Stackframe. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Stackframe on X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.6L4.5 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2Zm-1.2 18h1.9L6.4 4H4.4l13.3 16Z"/></svg>
+          </a>
+          <a href="#" aria-label="Stackframe on GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+          <a href="#" aria-label="Stackframe on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/contact.js"></script>
+</body>
+</html>

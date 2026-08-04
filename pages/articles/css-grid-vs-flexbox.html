@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid vs Flexbox: Choosing the Right Tool | Stackframe</title>
+  <meta name="description" content="Grid and Flexbox solve different problems. Here's how to tell which one your layout actually needs.">
+  <link rel="canonical" href="https://www.stackframe.example/pages/articles/css-grid-vs-flexbox.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CSS Grid vs Flexbox: Choosing the Right Tool | Stackframe">
+  <meta property="og:description" content="Grid and Flexbox solve different problems. Here's how to tell which one your layout actually needs.">
+  <meta property="og:url" content="https://www.stackframe.example/pages/articles/css-grid-vs-flexbox.html">
+  <meta property="og:site_name" content="Stackframe">
+  <meta property="og:image" content="https://www.stackframe.example/assets/images/og-cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CSS Grid vs Flexbox: Choosing the Right Tool | Stackframe">
+  <meta name="twitter:description" content="Grid and Flexbox solve different problems. Here's how to tell which one your layout actually needs.">
+  <meta name="twitter:image" content="https://www.stackframe.example/assets/images/og-cover.png">
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.stackframe.example/index.html"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.stackframe.example/pages/blog.html"},{"@type":"ListItem","position":3,"name":"CSS Grid vs Flexbox: Choosing the Right Tool","item":"https://www.stackframe.example/pages/articles/css-grid-vs-flexbox.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"CSS Grid vs Flexbox: Choosing the Right Tool","description":"Grid and Flexbox solve different problems. Here's how to tell which one your layout actually needs.","datePublished":"2026-07-22","dateModified":"2026-07-22","author":{"@type":"Person","name":"Avery Chen"},"publisher":{"@type":"Organization","name":"Stackframe"},"mainEntityOfPage":"https://www.stackframe.example/pages/articles/css-grid-vs-flexbox.html"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can Flexbox do everything Grid can?","acceptedAnswer":{"@type":"Answer","text":"Not quite. Flexbox can approximate some grid-like layouts, but it struggles with precise two-dimensional alignment, and the code needed to fake it is usually more fragile than just using Grid."}},{"@type":"Question","name":"Is one of them better supported by browsers?","acceptedAnswer":{"@type":"Answer","text":"Both have strong, current support across modern browsers. Support is no longer a meaningful factor in choosing between them."}},{"@type":"Question","name":"Which should I learn first?","acceptedAnswer":{"@type":"Answer","text":"Flexbox has a smaller set of concepts and solves more everyday problems, so it's a reasonable starting point before moving on to Grid."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo" aria-label="Stackframe home">
+        <span class="logo-mark" aria-hidden="true">{ }</span>
+        Stackframe
+      </a>
+
+      <nav class="main-nav" data-open="false" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/blog.html" aria-current="page">Blog</a></li>
+          <li><a href="../../pages/about.html">About</a></li>
+          <li><a href="../../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-content" aria-label="Toggle menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/blog.html">Blog</a></li>
+            <li aria-current="page">CSS Grid vs Flexbox: Choosing the Right Tool</li>
+        </ol>
+      </div>
+    </nav>
+
+    <article class="article-hero">
+      <div class="container">
+        <span class="category-tag">Web Development</span>
+        <h1>CSS Grid vs Flexbox: Choosing the Right Tool</h1>
+        <div class="article-byline">
+          <span class="author-avatar" aria-hidden="true">AC</span>
+          <span class="byline-name">Avery Chen</span>
+          <span aria-hidden="true">&middot;</span>
+          <time datetime="2026-07-22">July 22, 2026</time>
+          <span aria-hidden="true">&middot;</span>
+          <span>6 min read</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="container">
+      <div class="article-featured-image">
+        <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Web Development">
+      <rect width="800" height="360" fill="var(--color-accent-soft)"/>
+      <g stroke="var(--color-accent)" stroke-width="2.5" fill="none" opacity="0.85">
+        <path d="M60 260 L200 160 L320 210 L460 90 L600 140 L740 60"/>
+      </g>
+      <g fill="var(--color-accent)"><circle cx="200" cy="160" r="6"/><circle cx="460" cy="90" r="6"/><circle cx="740" cy="60" r="6"/></g>
+      <rect x="60" y="270" width="680" height="2" fill="var(--color-border)"/>
+    </svg>
+      </div>
+
+      <div class="article-body">
+        <div class="article-content">
+          <h2>Two layout systems, two different jobs</h2>
+        <p>Grid and Flexbox are often presented as competitors, which leads to a lot of unnecessary debate. In practice, they solve different problems and are frequently used together on the same page. Flexbox is a one-dimensional layout system — it excels at arranging items along a single row or column and distributing space between them. Grid is two-dimensional — it excels at defining both rows and columns at once and placing items precisely within that structure.</p><p>The simplest way to decide which to reach for is to ask what the content actually looks like. If you're picturing a single line of items — a navigation bar, a row of buttons, a list of tags — that's a Flexbox problem. If you're picturing a structure with defined rows and columns — a page layout, a photo gallery, a dashboard — that's a Grid problem.</p><p>Part of the confusion between the two comes from the fact that both can technically be coaxed into producing a similar-looking result for simple cases. That overlap disappears quickly as a layout gets more complex, which is why it's worth understanding the underlying model each one is built around, rather than just copying whichever snippet happens to work today.</p>
+
+        <h2>Where Flexbox shines</h2>
+        <p>Flexbox was built to solve the everyday problems of aligning and distributing items: centering something vertically, spacing navigation links evenly, or making a row of cards wrap gracefully on smaller screens. Its strength is how well it handles content of unknown or varying size — items can grow, shrink, and reflow without much extra code.</p><ul><li>Navigation bars and toolbars</li><li>Centering content vertically and horizontally</li><li>Form controls that need to sit in a row</li><li>Card content where the internal layout should adapt to varying text length</li></ul>
+
+        <h2>Where Grid shines</h2>
+        <p>Grid is the better choice whenever the layout has a structure that should hold regardless of content — a page shell with a header, sidebar, and main content area, or a gallery where every item should snap to a consistent column width. Grid also makes overlapping and precise placement far easier than Flexbox, since items can be assigned to specific rows and columns directly.</p><h3>Using them together</h3><p>A common and perfectly reasonable pattern is to use Grid for the page-level structure and Flexbox inside individual components. A card grid might use <code>display: grid</code> to lay out the cards themselves, while each card uses <code>display: flex</code> internally to align its icon, title, and button.</p>
+
+        <h2>A practical decision checklist</h2>
+        <p>When a layout decision isn't obvious, a short mental checklist helps more than memorizing every property. Ask whether the content forms a single row or column — if so, lean Flexbox. Ask whether the layout needs to align items across both rows and columns at once, such as a gallery or a page shell — if so, lean Grid. Ask whether items need to overlap or be placed in specific, named regions — that's almost always a job for Grid's template areas.</p><p>It's also worth remembering that neither system is a one-time decision for an entire page. Most real interfaces nest one inside the other several times over: a Grid-based page shell containing a Flexbox-based header, which itself contains a Flexbox-based button group. Thinking in terms of the smallest unit of layout you're solving, rather than trying to pick one system for the whole project, tends to produce cleaner and more maintainable CSS.</p>
+
+          <div class="summary-box">
+            <h3>Summary</h3>
+            <ul>
+              <li>Two layout systems, two different jobs</li><li>Where Flexbox shines</li><li>Where Grid shines</li><li>A practical decision checklist</li>
+            </ul>
+          </div>
+
+          <h2>Frequently asked questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+            <summary>Can Flexbox do everything Grid can?</summary>
+            <p>Not quite. Flexbox can approximate some grid-like layouts, but it struggles with precise two-dimensional alignment, and the code needed to fake it is usually more fragile than just using Grid.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is one of them better supported by browsers?</summary>
+            <p>Both have strong, current support across modern browsers. Support is no longer a meaningful factor in choosing between them.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which should I learn first?</summary>
+            <p>Flexbox has a smaller set of concepts and solves more everyday problems, so it's a reasonable starting point before moving on to Grid.</p>
+          </details>
+          </div>
+
+          <div class="article-tags">
+            <span class="category-tag">Web Development</span>
+            <span class="category-tag">Stackframe</span>
+          </div>
+
+          <div class="author-box">
+            <span class="author-avatar" aria-hidden="true">AC</span>
+            <div>
+              <h3>Avery Chen</h3>
+              <p>Avery writes about web development, artificial intelligence, and the practical craft of programming for Stackframe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="related-heading">
+        <div class="section-header">
+          <h2 id="related-heading">Related articles</h2>
+        </div>
+        <div class="card-grid">
+          <article class="article-card">
+            <div class="article-card-media"><svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Web Development">
+      <rect width="800" height="360" fill="var(--color-accent-soft)"/>
+      <g stroke="var(--color-accent)" stroke-width="2.5" fill="none" opacity="0.85">
+        <path d="M60 260 L200 160 L320 210 L460 90 L600 140 L740 60"/>
+      </g>
+      <g fill="var(--color-accent)"><circle cx="200" cy="160" r="6"/><circle cx="460" cy="90" r="6"/><circle cx="740" cy="60" r="6"/></g>
+      <rect x="60" y="270" width="680" height="2" fill="var(--color-border)"/>
+    </svg></div>
+            <div class="article-card-body">
+              <div class="card-meta">
+                <span class="category-tag">Web Development</span>
+                <span>6 min read</span>
+              </div>
+              <h3><a href="../../pages/articles/web-performance-2026.html">Why Web Performance Still Matters in 2026</a></h3>
+              <p>Faster sites still win — here's what actually moves the needle on load times, and what's just noise.</p>
+              <a href="../../pages/articles/web-performance-2026.html" class="card-read-more">Read more</a>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-media"><svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Web Development">
+      <rect width="800" height="360" fill="var(--color-accent-soft)"/>
+      <g stroke="var(--color-accent)" stroke-width="2.5" fill="none" opacity="0.85">
+        <path d="M60 260 L200 160 L320 210 L460 90 L600 140 L740 60"/>
+      </g>
+      <g fill="var(--color-accent)"><circle cx="200" cy="160" r="6"/><circle cx="460" cy="90" r="6"/><circle cx="740" cy="60" r="6"/></g>
+      <rect x="60" y="270" width="680" height="2" fill="var(--color-border)"/>
+    </svg></div>
+            <div class="article-card-body">
+              <div class="card-meta">
+                <span class="category-tag">Web Development</span>
+                <span>7 min read</span>
+              </div>
+              <h3><a href="../../pages/articles/progressive-web-apps.html">Getting Started with Progressive Web Apps</a></h3>
+              <p>A practical look at what a PWA actually is, what it takes to build one, and when it's worth the effort.</p>
+              <a href="../../pages/articles/progressive-web-apps.html" class="card-read-more">Read more</a>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-media"><svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Programming Tips">
+      <rect width="800" height="360" fill="var(--color-accent-soft)"/>
+      <text x="80" y="150" font-family="monospace" font-size="40" fill="var(--color-accent)">&lt;/&gt;</text>
+      <g stroke="var(--color-accent)" stroke-width="3" opacity="0.6">
+        <rect x="80" y="200" width="420" height="14" rx="7"/>
+        <rect x="80" y="240" width="300" height="14" rx="7"/>
+        <rect x="80" y="280" width="360" height="14" rx="7"/>
+      </g>
+    </svg></div>
+            <div class="article-card-body">
+              <div class="card-meta">
+                <span class="category-tag">Programming Tips</span>
+                <span>5 min read</span>
+              </div>
+              <h3><a href="../../pages/articles/five-programmer-habits.html">Five Habits That Make You a Better Programmer</a></h3>
+              <p>Small, unglamorous habits that compound into real skill — no shortcuts, just consistency.</p>
+              <a href="../../pages/articles/five-programmer-habits.html" class="card-read-more">Read more</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../../index.html" class="logo" aria-label="Stackframe home">
+            <span class="logo-mark" aria-hidden="true">{ }</span>
+            Stackframe
+          </a>
+          <p>A technology publication with original, practical writing on web development, AI, and programming.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/blog.html">Blog</a></li>
+            <li><a href="../../pages/about.html">About</a></li>
+            <li><a href="../../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../../pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../../pages/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="../../pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="../../pages/sitemap.html">HTML Sitemap</a></li>
+            <li><a href="../../pages/404.html">404 Page</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Stackframe. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Stackframe on X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.6L4.5 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2Zm-1.2 18h1.9L6.4 4H4.4l13.3 16Z"/></svg>
+          </a>
+          <a href="#" aria-label="Stackframe on GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+          <a href="#" aria-label="Stackframe on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Search Engines Actually Crawl Your Site | Stackframe</title>
+  <meta name="description" content="Crawling, indexing, and ranking are three different steps. Understanding the first two helps everything else.">
+  <link rel="canonical" href="https://www.stackframe.example/pages/articles/how-search-engines-crawl.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How Search Engines Actually Crawl Your Site | Stackframe">
+  <meta property="og:description" content="Crawling, indexing, and ranking are three different steps. Understanding the first two helps everything else.">
+  <meta property="og:url" content="https://www.stackframe.example/pages/articles/how-search-engines-crawl.html">
+  <meta property="og:site_name" content="Stackframe">
+  <meta property="og:image" content="https://www.stackframe.example/assets/images/og-cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Search Engines Actually Crawl Your Site | Stackframe">
+  <meta name="twitter:description" content="Crawling, indexing, and ranking are three different steps. Understanding the first two helps everything else.">
+  <meta name="twitter:image" content="https://www.stackframe.example/assets/images/og-cover.png">
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.stackframe.example/index.html"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.stackframe.example/pages/blog.html"},{"@type":"ListItem","position":3,"name":"How Search Engines Actually Crawl Your Site","item":"https://www.stackframe.example/pages/articles/how-search-engines-crawl.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How Search Engines Actually Crawl Your Site","description":"Crawling, indexing, and ranking are three different steps. Understanding the first two helps everything else.","datePublished":"2026-07-15","dateModified":"2026-07-15","author":{"@type":"Person","name":"Avery Chen"},"publisher":{"@type":"Organization","name":"Stackframe"},"mainEntityOfPage":"https://www.stackframe.example/pages/articles/how-search-engines-crawl.html"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does submitting a sitemap guarantee indexing?","acceptedAnswer":{"@type":"Answer","text":"No. A sitemap helps discovery, but indexing still depends on whether the page is judged useful and distinct enough to store."}},{"@type":"Question","name":"How often do crawlers revisit a site?","acceptedAnswer":{"@type":"Answer","text":"It varies widely based on how often a site changes and how authoritative it is. Frequently updated, well-linked sites tend to be crawled more often."}},{"@type":"Question","name":"Can blocking a page in robots.txt remove it from search results?","acceptedAnswer":{"@type":"Answer","text":"Not reliably. Blocking crawling prevents a page from being read, but a URL can still appear in results if it's linked to elsewhere. A noindex directive is the correct tool for that."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo" aria-label="Stackframe home">
+        <span class="logo-mark" aria-hidden="true">{ }</span>
+        Stackframe
+      </a>
+
+      <nav class="main-nav" data-open="false" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/blog.html" aria-current="page">Blog</a></li>
+          <li><a href="../../pages/about.html">About</a></li>
+          <li><a href="../../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-content" aria-label="Toggle menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/blog.html">Blog</a></li>
+            <li aria-current="page">How Search Engines Actually Crawl Your Site</li>
+        </ol>
+      </div>
+    </nav>
+
+    <article class="article-hero">
+      <div class="container">
+        <span class="category-tag">Technology</span>
+        <h1>How Search Engines Actually Crawl Your Site</h1>
+        <div class="article-byline">
+          <span class="author-avatar" aria-hidden="true">AC</span>
+          <span class="byline-name">Avery Chen</span>
+          <span aria-hidden="true">&middot;</span>
+          <time datetime="2026-07-15">July 15, 2026</time>
+          <span aria-hidden="true">&middot;</span>
+          <span>7 min read</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="container">
+      <div class="article-featured-image">
+        <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Technology">
+      <rect width="800" height="360" fill="var(--color-accent-2-soft)"/>
+      <g fill="none" stroke="var(--color-accent-2)" stroke-width="2.5" opacity="0.85">
+        <rect x="120" y="90" width="560" height="180" rx="14"/>
+        <line x1="120" y1="150" x2="680" y2="150"/>
+        <circle cx="160" cy="120" r="6" fill="var(--color-accent-2)" stroke="none"/>
+        <circle cx="190" cy="120" r="6" fill="var(--color-accent-2)" stroke="none"/>
+      </g>
+    </svg>
+      </div>
+
+      <div class="article-body">
+        <div class="article-content">
+          <h2>Crawling, indexing, and ranking are not the same thing</h2>
+        <p>It's easy to lump search engine behavior into a single mysterious process, but it actually happens in three distinct stages. Crawling is the act of discovering pages by following links. Indexing is deciding whether a discovered page is worth storing and understanding what it's about. Ranking is choosing which indexed pages to show, and in what order, for a given search. A page can be crawled but not indexed, and indexed but ranked poorly — each stage has its own failure modes.</p><p>This distinction matters more than it might seem, because most advice about improving search visibility only addresses one of the three stages. Writing better content improves ranking, but it does nothing for a page that a crawler can't reach in the first place. Fixing technical crawl issues without improving content quality won't help either, since a well-discovered but thin page still won't rank well once it's indexed.</p>
+
+        <h2>How a crawler finds your pages</h2>
+        <p>Crawlers discover new pages primarily by following links, starting from pages they already know about, plus any URLs submitted directly through a sitemap. This is why internal linking matters as much as it does: a page with no incoming links from anywhere on the site is much harder to discover, no matter how good the content is.</p><ul><li>A submitted <code>sitemap.xml</code> tells crawlers which URLs exist and roughly how important each one is.</li><li>A <code>robots.txt</code> file tells crawlers which sections of a site they should skip.</li><li>Internal links act as a map, and pages closer to the homepage are generally crawled more often.</li></ul>
+
+        <h2>Why some pages get crawled but not indexed</h2>
+        <p>A page can be perfectly reachable and still be left out of the index. Thin or duplicate content is the most common reason — if a page doesn't add anything beyond what already exists elsewhere, a search engine has little incentive to store it separately. Pages that take a long time to load, return errors intermittently, or rely entirely on JavaScript to render their main content can also be skipped or indexed incompletely.</p><h3>A quick way to check</h3><p>Site owners can typically request a URL inspection through their search console to see whether a specific page has been crawled, whether it's indexed, and if not, why. That kind of direct feedback is far more reliable than guessing.</p>
+
+        <h2>What this means for everyday site maintenance</h2>
+        <p>Understanding the crawl-index-rank pipeline changes how you prioritize technical fixes. A broken internal link isn't just a minor annoyance — it can quietly cut off a whole section of a site from discovery. A page that returns inconsistent server errors under load may get crawled less often over time, even if it works fine most of the time a person visits it directly.</p><p>Regularly checking crawl and index coverage reports, keeping the sitemap current as pages are added or removed, and fixing broken links promptly are unglamorous tasks, but they remove the friction that keeps otherwise good content from being found at all. Content quality still matters most, but it can't do its job if a page is never reliably discovered in the first place.</p>
+
+          <div class="summary-box">
+            <h3>Summary</h3>
+            <ul>
+              <li>Crawling, indexing, and ranking are not the same thing</li><li>How a crawler finds your pages</li><li>Why some pages get crawled but not indexed</li><li>What this means for everyday site maintenance</li>
+            </ul>
+          </div>
+
+          <h2>Frequently asked questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+            <summary>Does submitting a sitemap guarantee indexing?</summary>
+            <p>No. A sitemap helps discovery, but indexing still depends on whether the page is judged useful and distinct enough to store.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How often do crawlers revisit a site?</summary>
+            <p>It varies widely based on how often a site changes and how authoritative it is. Frequently updated, well-linked sites tend to be crawled more often.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can blocking a page in robots.txt remove it from search results?</summary>
+            <p>Not reliably. Blocking crawling prevents a page from being read, but a URL can still appear in results if it's linked to elsewhere. A noindex directive is the correct tool for that.</p>
+          </details>
+          </div>
+
+          <div class="article-tags">
+            <span class="category-tag">Technology</span>
+            <span class="category-tag">Stackframe</span>
+          </div>
+
+          <div class="author-box">
+            <span class="author-avatar" aria-hidden="true">AC</span>
+            <div>
+              <h3>Avery Chen</h3>
+              <p>Avery writes about web development, artificial intelligence, and the practical craft of programming for Stackframe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="related-heading">
+        <div class="section-header">
+          <h2 id="related-heading">Related articles</h2>
+        </div>
+        <div class="card-grid">
+          <article class="article-card">
+            <div class="article-card-media"><svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Web Development">
+      <rect width="800" height="360" fill="var(--color-accent-soft)"/>
+      <g stroke="var(--color-accent)" stroke-width="2.5" fill="none" opacity="0.85">
+        <path d="M60 260 L200 160 L320 210 L460 90 L600 140 L740 60"/>
+      </g>
+      <g fill="var(--color-accent)"><circle cx="200" cy="160" r="6"/><circle cx="460" cy="90" r="6"/><circle cx="740" cy="60" r="6"/></g>
+      <rect x="60" y="270" width="680" height="2" fill="var(--color-border)"/>
+    </svg></div>
+            <div class="article-card-body">
+              <div class="card-meta">
+                <span class="category-tag">Web Development</span>
+                <span>6 min read</span>
+              </div>
+              <h3><a href="../../pages/articles/web-performance-2026.html">Why Web Performance Still Matters in 2026</a></h3>
+              <p>Faster sites still win — here's what actually moves the needle on load times, and what's just noise.</p>
+              <a href="../../pages/articles/web-performance-2026.html" class="card-read-more">Read more</a>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-media"><svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Technology">
+      <rect width="800" height="360" fill="var(--color-accent-2-soft)"/>
+      <g fill="none" stroke="var(--color-accent-2)" stroke-width="2.5" opacity="0.85">
+        <rect x="120" y="90" width="560" height="180" rx="14"/>
+        <line x1="120" y1="150" x2="680" y2="150"/>
+        <circle cx="160" cy="120" r="6" fill="var(--color-accent-2)" stroke="none"/>
+        <circle cx="190" cy="120" r="6" fill="var(--color-accent-2)" stroke="none"/>
+      </g>
+    </svg></div>
+            <div class="article-card-body">
+              <div class="card-meta">
+                <span class="category-tag">Technology</span>
+                <span>6 min read</span>
+              </div>
+              <h3><a href="../../pages/articles/open-source-software.html">Why Open Source Software Powers the Internet</a></h3>
+              <p>Almost everything you use online rests on open source somewhere. Here's why that model has held up so well.</p>
+              <a href="../../pages/articles/open-source-software.html" class="card-read-more">Read more</a>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-media"><svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Programming Tips">
+      <rect width="800" height="360" fill="var(--color-accent-soft)"/>
+      <text x="80" y="150" font-family="monospace" font-size="40" fill="var(--color-accent)">&lt;/&gt;</text>
+      <g stroke="var(--color-accent)" stroke-width="3" opacity="0.6">
+        <rect x="80" y="200" width="420" height="14" rx="7"/>
+        <rect x="80" y="240" width="300" height="14" rx="7"/>
+        <rect x="80" y="280" width="360" height="14" rx="7"/>
+      </g>
+    </svg></div>
+            <div class="article-card-body">
+              <div class="card-meta">
+                <span class="category-tag">Programming Tips</span>
+                <span>7 min read</span>
+              </div>
+              <h3><a href="../../pages/articles/api-design-basics.html">What Makes an API Well Designed</a></h3>
+              <p>Good APIs feel obvious in hindsight. Here's what separates them from ones that are merely functional.</p>
+              <a href="../../pages/articles/api-design-basics.html" class="card-read-more">Read more</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../../index.html" class="logo" aria-label="Stackframe home">
+            <span class="logo-mark" aria-hidden="true">{ }</span>
+            Stackframe
+          </a>
+          <p>A technology publication with original, practical writing on web development, AI, and programming.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/blog.html">Blog</a></li>
+            <li><a href="../../pages/about.html">About</a></li>
+            <li><a href="../../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../../pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../../pages/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="../../pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="../../pages/sitemap.html">HTML Sitemap</a></li>
+            <li><a href="../../pages/404.html">404 Page</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Stackframe. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Stackframe on X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.6L4.5 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2Zm-1.2 18h1.9L6.4 4H4.4l13.3 16Z"/></svg>
+          </a>
+          <a href="#" aria-label="Stackframe on GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+          <a href="#" aria-label="Stackframe on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

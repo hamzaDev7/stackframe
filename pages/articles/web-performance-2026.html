@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Web Performance Still Matters in 2026 | Stackframe</title>
+  <meta name="description" content="Faster sites still win — here's what actually moves the needle on load times, and what's just noise.">
+  <link rel="canonical" href="https://www.stackframe.example/pages/articles/web-performance-2026.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Why Web Performance Still Matters in 2026 | Stackframe">
+  <meta property="og:description" content="Faster sites still win — here's what actually moves the needle on load times, and what's just noise.">
+  <meta property="og:url" content="https://www.stackframe.example/pages/articles/web-performance-2026.html">
+  <meta property="og:site_name" content="Stackframe">
+  <meta property="og:image" content="https://www.stackframe.example/assets/images/og-cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Web Performance Still Matters in 2026 | Stackframe">
+  <meta name="twitter:description" content="Faster sites still win — here's what actually moves the needle on load times, and what's just noise.">
+  <meta name="twitter:image" content="https://www.stackframe.example/assets/images/og-cover.png">
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.stackframe.example/index.html"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.stackframe.example/pages/blog.html"},{"@type":"ListItem","position":3,"name":"Why Web Performance Still Matters in 2026","item":"https://www.stackframe.example/pages/articles/web-performance-2026.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Why Web Performance Still Matters in 2026","description":"Faster sites still win — here's what actually moves the needle on load times, and what's just noise.","datePublished":"2026-07-28","dateModified":"2026-07-28","author":{"@type":"Person","name":"Avery Chen"},"publisher":{"@type":"Organization","name":"Stackframe"},"mainEntityOfPage":"https://www.stackframe.example/pages/articles/web-performance-2026.html"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does performance really affect search rankings?","acceptedAnswer":{"@type":"Answer","text":"Page experience signals, including Core Web Vitals, are one of many ranking factors. They won't outweigh weak content, but a slow page can hold back an otherwise strong one."}},{"@type":"Question","name":"Is a performance budget necessary for a small site?","acceptedAnswer":{"@type":"Answer","text":"Yes, even informally. A simple rule — such as keeping the homepage under a fixed weight — prevents slow creep as new features are added."}},{"@type":"Question","name":"Should I optimize for mobile or desktop first?","acceptedAnswer":{"@type":"Answer","text":"Mobile, generally. Slower processors and less reliable networks mean mobile performance problems are usually more severe, and fixes there tend to help desktop too."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo" aria-label="Stackframe home">
+        <span class="logo-mark" aria-hidden="true">{ }</span>
+        Stackframe
+      </a>
+
+      <nav class="main-nav" data-open="false" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/blog.html" aria-current="page">Blog</a></li>
+          <li><a href="../../pages/about.html">About</a></li>
+          <li><a href="../../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-content" aria-label="Toggle menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/blog.html">Blog</a></li>
+            <li aria-current="page">Why Web Performance Still Matters in 2026</li>
+        </ol>
+      </div>
+    </nav>
+
+    <article class="article-hero">
+      <div class="container">
+        <span class="category-tag">Web Development</span>
+        <h1>Why Web Performance Still Matters in 2026</h1>
+        <div class="article-byline">
+          <span class="author-avatar" aria-hidden="true">AC</span>
+          <span class="byline-name">Avery Chen</span>
+          <span aria-hidden="true">&middot;</span>
+          <time datetime="2026-07-28">July 28, 2026</time>
+          <span aria-hidden="true">&middot;</span>
+          <span>6 min read</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="container">
+      <div class="article-featured-image">
+        <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Web Development">
+      <rect width="800" height="360" fill="var(--color-accent-soft)"/>
+      <g stroke="var(--color-accent)" stroke-width="2.5" fill="none" opacity="0.85">
+        <path d="M60 260 L200 160 L320 210 L460 90 L600 140 L740 60"/>
+      </g>
+      <g fill="var(--color-accent)"><circle cx="200" cy="160" r="6"/><circle cx="460" cy="90" r="6"/><circle cx="740" cy="60" r="6"/></g>
+      <rect x="60" y="270" width="680" height="2" fill="var(--color-border)"/>
+    </svg>
+      </div>
+
+      <div class="article-body">
+        <div class="article-content">
+          <h2>Speed is still a feature, not a chore</h2>
+        <p>Every few years, someone declares that web performance no longer matters — that networks are fast enough, devices are powerful enough, and users have adapted to waiting. None of that has turned out to be true. Connections are faster on average, but pages have grown heavier at roughly the same rate, and the result is that a meaningful share of visitors still leave before a page finishes loading. Performance is not a checkbox you tick before launch. It is a feature that competes for the same budget as everything else on the page.</p><p>What makes performance different from most other features is that almost nobody asks for it directly. Users ask for a page that feels instant. They rarely connect that feeling to a specific number, but they notice the absence of it immediately — through hesitation, through a slight reluctance to click one more link, through simply leaving.</p><p>It also helps to separate perceived speed from raw speed. A page that starts rendering something useful within a few hundred milliseconds, even if it isn't fully loaded, tends to feel faster than one that loads everything at once but shows a blank screen until it's ready. That distinction shapes a lot of the advice below, since the goal isn't just a lower number on a report — it's a page that feels responsive from the first moment someone lands on it.</p>
+
+        <h2>What actually moves the needle</h2>
+        <p>Not every optimization is worth the same amount of engineering time. A few changes tend to produce most of the improvement:</p><ul><li><strong>Image weight.</strong> Unoptimized images are still the single biggest contributor to slow pages. Serving correctly sized, modern formats and using <code>loading="lazy"</code> for offscreen images usually delivers the largest single win.</li><li><strong>Render-blocking resources.</strong> Scripts and stylesheets that block the first paint should be trimmed to the minimum needed to show something useful, with the rest deferred.</li><li><strong>Font loading strategy.</strong> Custom fonts are worth using, but loading them without a fallback strategy causes layout shift and invisible text while they load.</li><li><strong>Third-party scripts.</strong> Analytics, chat widgets, and ad tags are frequently the slowest part of a page, and they are also the easiest to audit and trim.</li></ul><p>Compare that list with the kind of micro-optimizations developers often reach for first — shaving a few kilobytes off a minified bundle, for instance — and the priority becomes clear. Fix the big, boring things before the small, interesting ones.</p>
+
+        <h2>Measuring what your users experience</h2>
+        <p>Lab tools like Lighthouse are useful for catching regressions before they ship, but they run on a single, idealized connection. Field data — collected from real visitors on real networks — tells a more honest story. Core Web Vitals, in particular Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift, are worth tracking over time rather than checking once and forgetting.</p><h3>A simple way to prioritize fixes</h3><p>When a performance budget is tight, it helps to rank fixes by two questions: how many users does this affect, and how much effort does it take to fix? A slow font load that affects every visitor and takes an afternoon to fix should always come before a rare edge case that takes a week to resolve.</p>
+
+        <h2>Putting it into practice</h2>
+        <p>None of this requires a full rebuild. A practical starting point is a single audit pass: run a lab test, pull field data if it's available, and list every issue by how many visitors it touches. Fix the handful of items that affect the whole site before spending time on anything narrower. Then set a simple budget — a maximum page weight, or a target Largest Contentful Paint — and treat any change that breaks it as a bug, the same way you would treat a broken feature. Performance work rarely feels finished, but it compounds: each fix makes the next one easier to justify, because the baseline everyone is protecting keeps getting better.</p><p>The teams that keep their sites fast long-term tend to share one habit: they measure continuously rather than only before a launch. A regression that would have been a five-minute fix on day one can take a full afternoon to track down three months later, once several smaller changes have piled on top of it.</p>
+
+          <div class="summary-box">
+            <h3>Summary</h3>
+            <ul>
+              <li>Speed is still a feature, not a chore</li><li>What actually moves the needle</li><li>Measuring what your users experience</li><li>Putting it into practice</li>
+            </ul>
+          </div>
+
+          <h2>Frequently asked questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+            <summary>Does performance really affect search rankings?</summary>
+            <p>Page experience signals, including Core Web Vitals, are one of many ranking factors. They won't outweigh weak content, but a slow page can hold back an otherwise strong one.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is a performance budget necessary for a small site?</summary>
+            <p>Yes, even informally. A simple rule — such as keeping the homepage under a fixed weight — prevents slow creep as new features are added.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Should I optimize for mobile or desktop first?</summary>
+            <p>Mobile, generally. Slower processors and less reliable networks mean mobile performance problems are usually more severe, and fixes there tend to help desktop too.</p>
+          </details>
+          </div>
+
+          <div class="article-tags">
+            <span class="category-tag">Web Development</span>
+            <span class="category-tag">Stackframe</span>
+          </div>
+
+          <div class="author-box">
+            <span class="author-avatar" aria-hidden="true">AC</span>
+            <div>
+              <h3>Avery Chen</h3>
+              <p>Avery writes about web development, artificial intelligence, and the practical craft of programming for Stackframe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="related-heading">
+        <div class="section-header">
+          <h2 id="related-heading">Related articles</h2>
+        </div>
+        <div class="card-grid">
+          <article class="article-card">
+            <div class="article-card-media"><svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Web Development">
+      <rect width="800" height="360" fill="var(--color-accent-soft)"/>
+      <g stroke="var(--color-accent)" stroke-width="2.5" fill="none" opacity="0.85">
+        <path d="M60 260 L200 160 L320 210 L460 90 L600 140 L740 60"/>
+      </g>
+      <g fill="var(--color-accent)"><circle cx="200" cy="160" r="6"/><circle cx="460" cy="90" r="6"/><circle cx="740" cy="60" r="6"/></g>
+      <rect x="60" y="270" width="680" height="2" fill="var(--color-border)"/>
+    </svg></div>
+            <div class="article-card-body">
+              <div class="card-meta">
+                <span class="category-tag">Web Development</span>
+                <span>6 min read</span>
+              </div>
+              <h3><a href="../../pages/articles/css-grid-vs-flexbox.html">CSS Grid vs Flexbox: Choosing the Right Tool</a></h3>
+              <p>Grid and Flexbox solve different problems. Here's how to tell which one your layout actually needs.</p>
+              <a href="../../pages/articles/css-grid-vs-flexbox.html" class="card-read-more">Read more</a>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-media"><svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Web Development">
+      <rect width="800" height="360" fill="var(--color-accent-soft)"/>
+      <g stroke="var(--color-accent)" stroke-width="2.5" fill="none" opacity="0.85">
+        <path d="M60 260 L200 160 L320 210 L460 90 L600 140 L740 60"/>
+      </g>
+      <g fill="var(--color-accent)"><circle cx="200" cy="160" r="6"/><circle cx="460" cy="90" r="6"/><circle cx="740" cy="60" r="6"/></g>
+      <rect x="60" y="270" width="680" height="2" fill="var(--color-border)"/>
+    </svg></div>
+            <div class="article-card-body">
+              <div class="card-meta">
+                <span class="category-tag">Web Development</span>
+                <span>7 min read</span>
+              </div>
+              <h3><a href="../../pages/articles/progressive-web-apps.html">Getting Started with Progressive Web Apps</a></h3>
+              <p>A practical look at what a PWA actually is, what it takes to build one, and when it's worth the effort.</p>
+              <a href="../../pages/articles/progressive-web-apps.html" class="card-read-more">Read more</a>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card-media"><svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing Technology">
+      <rect width="800" height="360" fill="var(--color-accent-2-soft)"/>
+      <g fill="none" stroke="var(--color-accent-2)" stroke-width="2.5" opacity="0.85">
+        <rect x="120" y="90" width="560" height="180" rx="14"/>
+        <line x1="120" y1="150" x2="680" y2="150"/>
+        <circle cx="160" cy="120" r="6" fill="var(--color-accent-2)" stroke="none"/>
+        <circle cx="190" cy="120" r="6" fill="var(--color-accent-2)" stroke="none"/>
+      </g>
+    </svg></div>
+            <div class="article-card-body">
+              <div class="card-meta">
+                <span class="category-tag">Technology</span>
+                <span>7 min read</span>
+              </div>
+              <h3><a href="../../pages/articles/how-search-engines-crawl.html">How Search Engines Actually Crawl Your Site</a></h3>
+              <p>Crawling, indexing, and ranking are three different steps. Understanding the first two helps everything else.</p>
+              <a href="../../pages/articles/how-search-engines-crawl.html" class="card-read-more">Read more</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../../index.html" class="logo" aria-label="Stackframe home">
+            <span class="logo-mark" aria-hidden="true">{ }</span>
+            Stackframe
+          </a>
+          <p>A technology publication with original, practical writing on web development, AI, and programming.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/blog.html">Blog</a></li>
+            <li><a href="../../pages/about.html">About</a></li>
+            <li><a href="../../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../../pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../../pages/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="../../pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="../../pages/sitemap.html">HTML Sitemap</a></li>
+            <li><a href="../../pages/404.html">404 Page</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Stackframe. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Stackframe on X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.6L4.5 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2Zm-1.2 18h1.9L6.4 4H4.4l13.3 16Z"/></svg>
+          </a>
+          <a href="#" aria-label="Stackframe on GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+          <a href="#" aria-label="Stackframe on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

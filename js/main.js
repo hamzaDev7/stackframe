@@ -72,3 +72,21 @@
     yearEl.textContent = new Date().getFullYear();
   }
 })();
+const toggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".main-nav");
+const overlay = document.querySelector(".nav-overlay");
+
+toggle.addEventListener("click", () => {
+    const open = nav.dataset.open === "true";
+
+    nav.dataset.open = !open;
+    toggle.setAttribute("aria-expanded", !open);
+
+    overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+    nav.dataset.open = "false";
+    toggle.setAttribute("aria-expanded", "false");
+    overlay.classList.remove("active");
+});
